@@ -2,22 +2,22 @@ import axios from 'axios';
 
 const springBootAppUrl = `http://localhost:9999/`;
 
-const getBookByIdService = (id) => {
-    console.log('getBookByIdService');
-    return axios.get(`${springBootAppUrl}user/get-book-by-id/${id}`);
+const getCategoryByIdService = (id) => {
+    console.log('getCategoryByIdService');
+    return axios.get(`${springBootAppUrl}user/get-category-by-id/${id}`);
 }
-const getBookByNameService = (name) => {
-    console.log('getBookByNameService');
-    return axios.get(`${springBootAppUrl}user/get-book-by-name/${name}`);
+const getCategoryByNameService = (name) => {
+    console.log('getCategoryByNameService');
+    return axios.get(`${springBootAppUrl}user/get-category-by-name/${name}`);
 }
-const getAllBooksService = () => {
-    console.log(`getAllBooksService`);
-    return axios.get(`${springBootAppUrl}user/get-all-books`);
-}
-
-const addBookService = (book) => {
-    console.log(`addBookService`);
-    return axios.post(`${springBootAppUrl}admin/add-book`, book);
+const getAllCategoryService = () => {
+    console.log(`getAllCategoryService`);
+    return axios.get(`${springBootAppUrl}user/getAllCategory`);
 }
 
-export { getBookByIdService, getBookByNameService, getAllBooksService, addBookService };
+const addCategoryService = (category) => {
+    console.log(`addCategoryService`);
+    return axios.post(`${springBootAppUrl}admin/addCategory`, category);
+}
+
+export { getCategoryByIdService, getCategoryByNameService, getAllCategoryService, addCategoryService };
